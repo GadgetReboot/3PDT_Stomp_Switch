@@ -1,0 +1,210 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "3PDT Stomp Switch"
+Date "2024-03-24"
+Rev "1"
+Comp "Gadget Reboot"
+Comment1 "https://www.youtube.com/gadgetreboot"
+Comment2 "https://github.com/GadgetReboot/3PDT_Stomp_Switch"
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 4125 5675 0    100  ~ 0
+3PDT Stomp Switch
+$Comp
+L power:GNDREF #PWR06
+U 1 1 65C1FE4D
+P 4325 5200
+F 0 "#PWR06" H 4325 4950 50  0001 C CNN
+F 1 "GNDREF" H 4330 5027 50  0001 C CNN
+F 2 "" H 4325 5200 50  0001 C CNN
+F 3 "" H 4325 5200 50  0001 C CNN
+	1    4325 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_3PDT:SW_3PDT SW1
+U 1 1 6600E907
+P 4750 3725
+F 0 "SW1" H 4750 3918 50  0000 C CNN
+F 1 "SW_3PDT" H 4750 3919 50  0001 C CNN
+F 2 "footprints:STOMP-SWITCH-3PDT" H 4750 3725 50  0001 C CNN
+F 3 "~" H 4750 3725 50  0001 C CNN
+	1    4750 3725
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_3PDT:SW_3PDT SW1
+U 2 1 6600F7C3
+P 4750 4400
+F 0 "SW1" H 4750 4593 50  0000 C CNN
+F 1 "SW_3PDT" H 4750 4594 50  0001 C CNN
+F 2 "footprints:STOMP-SWITCH-3PDT" H 4750 4400 50  0001 C CNN
+F 3 "~" H 4750 4400 50  0001 C CNN
+	2    4750 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_3PDT:SW_3PDT SW1
+U 3 1 660107C2
+P 4775 5100
+F 0 "SW1" H 4775 5293 50  0000 C CNN
+F 1 "SW_3PDT" H 4775 5294 50  0001 C CNN
+F 2 "footprints:STOMP-SWITCH-3PDT" H 4775 5100 50  0001 C CNN
+F 3 "~" H 4775 5100 50  0001 C CNN
+	3    4775 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 6605FCD1
+P 5150 5000
+F 0 "R1" V 5050 5025 50  0000 R CNN
+F 1 "680r" V 5250 5075 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5150 5000 50  0001 C CNN
+F 3 "~" H 5150 5000 50  0001 C CNN
+	1    5150 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_Small_ALT D1
+U 1 1 66060BAA
+P 5400 5000
+F 0 "D1" H 5400 5100 50  0000 C CNN
+F 1 "LED_Small_ALT" H 5400 5144 50  0001 C CNN
+F 2 "LED_THT:LED_D5.0mm" V 5400 5000 50  0001 C CNN
+F 3 "~" V 5400 5000 50  0001 C CNN
+	1    5400 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 4500 4950 4500
+Text Label 6075 4300 2    50   ~ 0
+In_Jack
+Text Label 3925 3725 0    50   ~ 0
+Out_Jack
+Text Label 3925 4400 0    50   ~ 0
+Fx_In
+Text Label 6075 3625 2    50   ~ 0
+Fx_Out
+Wire Wire Line
+	4975 5000 5050 5000
+Text Label 5550 5000 0    50   ~ 0
+LED_A
+Text Label 5500 5200 0    50   ~ 0
+Gnd_Byp
+Wire Wire Line
+	5300 5000 5250 5000
+$Comp
+L Connector_Generic:Conn_01x07 J1
+U 1 1 660BE568
+P 6975 3875
+F 0 "J1" H 6925 3450 50  0000 L CNN
+F 1 "Conn_01x07" V 6938 4255 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 6975 3875 50  0001 C CNN
+F 3 "~" H 6975 3875 50  0001 C CNN
+	1    6975 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6775 3675 6200 3675
+Wire Wire Line
+	6200 3675 6200 3625
+Wire Wire Line
+	6775 3875 6200 3875
+Wire Wire Line
+	6200 3875 6200 4300
+Wire Wire Line
+	4950 4300 5275 4300
+Wire Wire Line
+	6775 3575 6275 3575
+Wire Wire Line
+	6275 3575 6275 3200
+Wire Wire Line
+	6275 3200 3875 3200
+Wire Wire Line
+	3875 3200 3875 3725
+Wire Wire Line
+	3875 3725 4550 3725
+Wire Wire Line
+	3875 4400 3875 4750
+Wire Wire Line
+	3875 4750 6300 4750
+Wire Wire Line
+	6300 4750 6300 3975
+Wire Wire Line
+	6300 3975 6775 3975
+Wire Wire Line
+	3875 4400 4550 4400
+Wire Wire Line
+	6400 5000 6400 4075
+Wire Wire Line
+	6400 4075 6775 4075
+Wire Wire Line
+	5500 5000 6400 5000
+Wire Wire Line
+	6500 5200 6500 4175
+Wire Wire Line
+	6500 4175 6775 4175
+Wire Wire Line
+	4975 5200 6500 5200
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 66150A01
+P 5275 4575
+F 0 "#PWR0101" H 5275 4325 50  0001 C CNN
+F 1 "GNDREF" H 5280 4402 50  0001 C CNN
+F 2 "" H 5275 4575 50  0001 C CNN
+F 3 "" H 5275 4575 50  0001 C CNN
+	1    5275 4575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 4575 5275 4500
+Wire Wire Line
+	4325 5200 4325 5100
+Wire Wire Line
+	4325 5100 4575 5100
+Text Notes 7200 3800 2    50   ~ 0
+Gnd
+Text Notes 7450 3900 2    50   ~ 0
+Input Jack
+Text Notes 7250 4000 2    50   ~ 0
+Fx In
+Text Notes 7050 3700 0    50   ~ 0
+Fx Out
+Text Notes 7500 3600 2    50   ~ 0
+Output Jack
+Text Notes 7450 4100 2    50   ~ 0
+LED Anode
+Text Notes 7500 4200 2    50   ~ 0
+Bypass Gnd
+Wire Wire Line
+	4950 3625 6200 3625
+Wire Wire Line
+	6775 3775 5925 3775
+Wire Wire Line
+	5925 3775 5925 3850
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 661758D9
+P 5925 3850
+F 0 "#PWR0102" H 5925 3600 50  0001 C CNN
+F 1 "GNDREF" H 5930 3677 50  0001 C CNN
+F 2 "" H 5925 3850 50  0001 C CNN
+F 3 "" H 5925 3850 50  0001 C CNN
+	1    5925 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3825 5275 3825
+Wire Wire Line
+	5275 3825 5275 4300
+Connection ~ 5275 4300
+Wire Wire Line
+	5275 4300 6200 4300
+$EndSCHEMATC
